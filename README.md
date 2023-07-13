@@ -41,4 +41,5 @@ For MacOS users, execute the following line in the terminal:
 This also works for other packages you might need.
 
 ## Getting Started
-The framework of modeling in **pyISBO** is as follows.
+The framework of modeling in **pyISBO** is as follows.  
+![Framework of pyISBO modeling](/steps of pyISO implementation.png)
