@@ -42,4 +42,4 @@ This also works for other packages you might need.
 
 ## Getting Started
 The framework of modeling in **pyISBO** is as follows.  
-![Framework of pyISBO modeling](/steps of pyISO implementation.png)
+![Framework of pyISBO modeling](images/steps of pyISO implementation.png)
