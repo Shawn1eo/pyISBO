@@ -36,10 +36,16 @@ For Linux CentOS users, execute the following line in the shell:
 **`python3 install pyISBO`**  
 
 For MacOS users, execute the following line in the terminal:  
+
 **`sudo apt install python3-pyISBO`**  
 
 This also works for other packages you might need.
 
 ## Getting Started
 The framework of modeling in **pyISBO** is as follows.  
-![Framework of pyISBO modeling](images/steps of pyISO implementation.png)
+
+![Framework of pyISBO modeling](/images/steps of pyISO implementation.png)
+
+
+
+![Minion](https://octodex.github.com/images/minion.png)
