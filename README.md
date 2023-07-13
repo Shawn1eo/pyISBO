@@ -9,7 +9,8 @@ To fully utilize all the functions in this package, your Python environment need
 4. numpy >= 1.19.0;  
 5. pandas >= 1.3.0;  
 6. scikit-learn >= 1.0.2;  
-7. sklearn-contrib-py-earth >= 0.1.0;  
+7. sklearn-contrib-py-earth >= 0.1.0;
+
 You can still use this package if some requirement above is not satistied. Within these packages, numpy and pandas are neccessary, and the relationship between surrogates and packages are listed in the following table.
 
 | Surrogate Type | **pyISBO** class | Related Package |
