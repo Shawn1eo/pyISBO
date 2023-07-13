@@ -22,7 +22,7 @@ You can still use this package if some requirement above is not satistied. Withi
 | Neural Network | NN | tensorflow |
 | Multiple Adaptive Regression Spline  | MARS | sklearn-contrib-py-earth |
 
-Surrogate is not available if the corresponding package is not installed. And if any of the requirement above is not satisfied, then the automatical regression function *AutoRegression* is not available too. Due to version differences, many users might encounter difficulty when installing py-earth package (sklearn-contrib-py-earth). After our practice, installing this package by its wheels is most stable. Users may refer to https://pypi.org/project/sklearn-contrib-py-earth/#files to find the corresponding version of your computer.
+Surrogate is not available if the corresponding package is not installed. And if any of the requirement above is not satisfied, then the automatical regression function *AutoRegression* is not available either. Due to version differences, many users might encounter difficulty when installing py-earth package (sklearn-contrib-py-earth). After our practice, installing this package by its wheels is most stable. Users may refer to https://pypi.org/project/sklearn-contrib-py-earth/#files to find the corresponding version of your computer.
 
 ## Installation
 The **pyISBO** package can be installed by using <code>pip</code> command:  
@@ -41,3 +41,4 @@ For MacOS users, execute the following line in the terminal:
 This also works for other packages you might need.
 
 ## Getting Started
+The framework of modeling in **pyISBO** is as follows.
