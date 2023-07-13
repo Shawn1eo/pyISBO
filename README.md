@@ -43,9 +43,4 @@ This also works for other packages you might need.
 
 ## Getting Started
 The framework of modeling in **pyISBO** is as follows.  
-
-![Framework of pyISBO modeling](/images/steps of pyISO implementation.png)
-
-
-
-![Minion](https://octodex.github.com/images/minion.png)
+<img src="images/steps%20of%20pyISO%20implementation.png" width = "388" height = "355.5" alt="" align=center />
