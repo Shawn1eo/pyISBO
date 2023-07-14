@@ -27,18 +27,11 @@ Surrogate is not available if the corresponding package is not installed. And if
 
 ## Installation
 The **pyISBO** package can be installed by using <code>pip</code> command:  
-For windows users, execute the following line in cmd:  
+For windows/Linux CentOS/MacOS users, execute the following line in cmd/shell/terminal:  
 **`pip install pyISBO`**  
 
 For Linux Ubuntu users, execute the following line in the shell:  
-**`apt install python3-pyISBO`**  
-
-For Linux CentOS users, execute the following line in the shell:  
-**`python3 install pyISBO`**  
-
-For MacOS users, execute the following line in the terminal:  
-
-**`sudo apt install python3-pyISBO`**  
+**`pip install pyISBO --break-system-packages`**  
 
 This also works for other packages you might need.
 
