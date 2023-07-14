@@ -71,7 +71,7 @@ y = model.MIP.variablesDict()["y"]
 
 model.MIP.setObjective(y)
 model.MIP.sense = LpMinimize
-model.MIP.addConstr(lpSum(a[i]*x[i] for i in range(numOfParameter)) <= b)
+model.MIP += lpSum(a[i]*x[i] for i in range(numOfParameter)) <= b
 </code>
 
 ### Solve the model
