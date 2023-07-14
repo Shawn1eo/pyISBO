@@ -76,3 +76,6 @@ model.MIP.addConstr(lpSum(a[i]*x[i] for i in range(numOfParameter)) <= b)
 
 ### Solve the model
 Finally, you can solve the MIP by *optimize* method. The solution and optimized objective value can be found in *optimizedParameter* and *output* object.
+
+# Contact Us!
+If you find any problem when using this package, feel free to contact us by email: liu-xt22@mails.tsinghua.edu.cn
