@@ -33,7 +33,7 @@ For windows/Linux CentOS/MacOS users, execute the following line in cmd/shell/te
 For Linux Ubuntu users, execute the following line in the shell:  
 **`pip install pyISBO --break-system-packages`**  
 
-This also works for other packages you might need.
+This also works for other packages you might need. If above methods don't work, you can check https://packaging.python.org/en/latest/tutorials/installing-packages/ for more detailed installation guide.
 
 ## User Guidance
 The framework of modeling in **pyISBO** is as follows.  
