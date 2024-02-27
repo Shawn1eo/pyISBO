@@ -36,7 +36,7 @@ This also works for other packages you might need. If above methods don't work, 
 
 ## User Guidance
 The framework of modeling in **pyISBO** is as follows.  
-<img src="images/steps%20of%20pyISO%20implementation.png" width = "388" height = "355.5" alt="" align=center />
+<img src="images/steps%20of%20pyISO%20implementation.jpg" width = "388" height = "355.5" alt="" align=center />
 
 ### Choose and instantiate a surrogate
 In the first step, users need to choose a surrogate model category and instantiate. As aforementioned, pyISO provides seven kinds of surrogate models. Users can choose a specific surrogate model according to their wills, or choose *AutoRegression* which can automatically choose a surrogate model with the best performance in the second step. In this step, you need to give a information table of your parameters and specify a scoring metric. The parameter information table should contain four columns: Name, lb, ub and types, which correspond to the names, lower bounds, upper bounds and types of your input variables. You can find an example by checking the second sheet of "example.xlsx", which is in the same root directory as this file. As for scoring metric, **pyISBO** share the same scoring system as sklearn, use <code>sorted(sklearn.metrics.SCORERS.keys())</code> to get valid options. For example:  
