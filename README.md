@@ -48,7 +48,10 @@ model = LR(parameterInfo, "neg_mean_squared_error")
 By this code, user instantiate a linear regression surrogate, input the parameter information table and specify "neg_mean_squared_error" as the scoring metric.
 
 ### Fit the surrogate with your data
-Next, users can train the model with their data by *fit* function. In this step, the requirement of data is the same as other sklearn machine learning model. The training data should be matrix of shape (n_sample, n_features), the target value should be array of shape  (n_samples, 1). Currently, pyISBO don't support multiple targets. If you choose *AutoRegression* class, then you need to specify whether this is a classification problem by a boolean parameter *classification* whose default value is False. For tree-based models, you can set the hyper-parameters of the model in a way consistent with sklearn. To be noted, the parameter *criterion* is only used for model fitting. If you want to change the metric for the output score, please modify the *scoring* parameter in the initialization.
+Next, users can train the model with their data by *fit* function. In this step, the requirement of data is the same as other sklearn machine learning model. The training data should be matrix of shape (n_sample, n_features), the target value should be array of shape  (n_samples, 1). Currently, pyISBO don't support multiple targets.
+
+If you choose *AutoRegression* class, then you need to specify whether this is a classification problem by a boolean parameter *classification* whose default value is False. For tree-based models, you can set the hyper-parameters of the model in a way consistent with sklearn. To be noted, the parameter *criterion* is only used for model fitting. If you want to change the metric for the output score, please modify the *scoring* parameter in the initialization.
+
 Hyper-parameters of some surrogates in **pyISBO** are adjustable. In this step, **pyISBO** will automatically choose hyper-parameters with the best cross-validation score.
 
 ### Transform the surrogate model into a MIP model (optional)
