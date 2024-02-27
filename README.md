@@ -1,5 +1,5 @@
 # pyISBO
-**pyISBO** is a Python based integrated surrogate-based optimization toolbox that integrates surrogate **construction, transformation, customization and optimization**. To the best of our knowledge, it's the first integrated whole-process surrogate-based optimization toolbox in Python. **pyISO** can be used to automatically choose and construct a surrogate with minimized cross-validation error, and minimize/maximize the response variable based on it. **pyISO** also allows users to specify and train a certain surrogate, hereafter they can integrate it into their own optimization models with other variables, constraints and new objective. **pyISO** currently supports predictive models of the following categories: Linear Regression, Quadratic Regression, Logistic Regression, Decision Tree Regression, Random Forest, Multivariate Adaptive Regression Splines (MARS)  and Deep Neural Network with rectified linear activation function (DNN). 
+**pyISBO** is a Python based integrated surrogate-based optimization toolbox that integrates surrogate **construction, transformation, customization and optimization**. To the best of our knowledge, it's the first integrated whole-process surrogate-based optimization toolbox in Python. **pyISO** can be used to automatically choose and construct a surrogate with minimized cross-validation error, and minimize/maximize the response variable based on it. **pyISO** also allows users to specify and train a certain surrogate, hereafter they can integrate it into their own optimization models with other variables, constraints and new objective. **pyISO** currently supports predictive models of the following categories: Linear Regression, Quadratic Regression, Logistic Regression, Decision Tree Regression, Random Forest, Extra Tree and Deep Neural Network with rectified linear activation function (DNN). 
 
 ## setup：  
 To fully utilize all the functions in this package, your Python environment need to satisfy all following requirement (which we highly recommend).
@@ -9,7 +9,6 @@ To fully utilize all the functions in this package, your Python environment need
 4. numpy >= 1.19.0;  
 5. pandas >= 1.3.0;  
 6. scikit-learn >= 1.0.2;  
-7. sklearn-contrib-py-earth >= 0.1.0;
 
 You can still use this package if some requirement above is not satistied. Within these packages, numpy and pandas are neccessary, and the relationship between surrogates and packages are listed in the following table.
 
@@ -21,9 +20,9 @@ You can still use this package if some requirement above is not satistied. Withi
 | Decision Tree | DT | scikit-learn |
 | Random Forest | RF | scikit-learn |
 | Neural Network | NN | tensorflow |
-| Multiple Adaptive Regression Spline  | MARS | sklearn-contrib-py-earth |
+| Extra Tree  | ET | scikit-learn |
 
-Surrogate is not available if the corresponding package is not installed. And if any of the requirement above is not satisfied, then the automatical regression function *AutoRegression* is not available either. Due to version differences, many users might encounter difficulty when installing py-earth package (sklearn-contrib-py-earth). After our practice, installing this package by its wheels is stablest. Users may refer to https://pypi.org/project/sklearn-contrib-py-earth/#files to find the corresponding version of your computer.
+Surrogate is not available if the corresponding package is not installed. And if any of the requirement above is not satisfied, then the automatical regression function *AutoRegression* is not available either. 
 
 ## Installation
 The **pyISBO** package can be installed by using <code>pip</code> command:  
@@ -76,6 +75,9 @@ model.MIP += lpSum(a[i]*x[i] for i in range(numOfParameter)) <= b
 
 ### Solve the model
 Finally, you can solve the MIP by *optimize* method. The solution and optimized objective value can be found in *optimizedParameter* and *output* object.
+
+### Update the model
+If new data comes, the user can update the model by *update* function. The third parameter "UpdateMode" should be set as "a" or "w". When "UpdateMode" is set as "a", new data will be appended to the original data. Or if "UpdateMode" is set as "w", new data will replace the original data. If the fourth parameter "Reprocess" is set as "True", pyISBO will continue fitting and optimizing the model after the data is renewed.
 
 # Contact Us!
 If you find any problem when using this package, feel free to contact us by email: liu-xt22@mails.tsinghua.edu.cn
